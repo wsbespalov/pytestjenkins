@@ -21,3 +21,8 @@ def test_credit():
     w = Wallet(10)
     w.credit(10)
     assert w.amount() == float(20.0)
+    
+def test_credit_negative():
+    w = Wallet(10)
+    w.credit(10)
+    assert w.amount() != float(30.0)
